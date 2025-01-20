@@ -1,13 +1,13 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { rightImg, watchImg } from "../utils";
-import VideoCarousel from "./Videocarousel";
+import VideoCarousel from "../components/VideoCarousel";
 import { animatewithGsap } from "../utils/animations";
 
 const Highlights = () => {
   useGSAP(() => {
-    animatewithGsap("#title", { opacity: 1, y: 0 })
-    animatewithGsap('.link', {opacity: 1, y: 0, duration: 1, stagger: 0.25})
+    animatewithGsap("#title", { opacity: 1, y: 0 });
+    animatewithGsap(".link", { opacity: 1, y: 0, duration: 1, stagger: 0.25 });
   }, []);
 
   return (
@@ -31,11 +31,9 @@ const Highlights = () => {
               <img src={rightImg} alt="next" className="ml-2" />
             </p>
           </div>
-
         </div>
 
         <VideoCarousel />
-
       </div>
     </section>
   );
